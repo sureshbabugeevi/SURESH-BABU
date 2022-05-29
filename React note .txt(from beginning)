@@ -1,0 +1,98 @@
+Important points:
+ npx create-react-app app-name
+ cd app-name
+ npm start
+
+-->Folder structure
+-->Components-Build block of an application which can reuse
+-->props:It stands the properties which it is used to pass the data from parent component to child component.
+-->Props are immutable(means "fixed or can't to be changed")
+
+// Never touch the DOM
+// There is two ways of creating component
+// 1:class based components(ES6)
+// 2:Functional components 
+
+// JSX-->Javascript and XML
+// XML-->we should have wrap all the elements in parent tag
+// Every tag should have a closing tag 
+
+-->State
+
+-->The React was released on 2013 in jsonconfiguration as a open source
+-->Never touch the DOM
+-->Any DOM manipulations will be done by React DOM
+-->For bigger applications DOM manipulations are "Expensive"
+-->React was release virtual DOM
+-->Virtual DOM is a copy of Real DOM
+-->React keeps Light Weight Representation of the Real DOM in the memory,and that is known as "Virtual DOM"
+-->Manipulating Real DOM is much slower than the Manipulating the "Virtual DOM".
+
+-->Class components (ES6) and Functional components
+ -->from 2013 to 2019
+ *Class components are called as statefull components
+ *Class components has the react features like life cycle methods
+ -->Making Network calls will happened only in class components
+
+ -->Functional components are also called as stateless Components
+ --> In 2019 (React 16.8) hooks was released
+ -->Hooks are Javascript Functions which can be use state and lifecycle in Functional components. 
+
+ Life Cycle methods
+ -->Mounting Phase
+    -->constructor
+    -->set up state
+    -->we cannot make side effect
+
+    -->getDerivedStateFromProps
+    -->sync the state from props
+    -->we cannot make a side effect
+
+    -->render methods
+    --> All child components renders
+
+    -->componentDidmount
+       -->we can cause the side effects(Network call,local Store)
+    -->Updating Phase:
+      -->Update phase will occur,When the state or props is 
+      update the component will rerender 
+
+    -->Unmounting Phase:
+      --> Unmounting Phase This is the final phase of a component's life-cycle in which the component is removed from the DOM.
+    The useEffect function accepts two parameters, a call-back function and the life-cycle phase as a second parameter 
+    i.e when you want the call-back function to be executed.
+                              (OR)
+      -->To clean  up the resourses When the component is removed from the DOM.
+     
+    // Hooks are javascript Functions which we can hook the state and other react features in functional components
+    -->Rules of Hooks 
+    -->custom Hook          
+
+    1.useState hook 
+    2.useEffect hook 
+    3.useRef 
+    4.useContext
+       -->props drilling 
+    5.useReducer hook
+
+    /*useReducer hook is alternative of to the useState*/
+
+    Multiple page applications
+    Singlepage Applications -it means only part of a page will be reload
+
+    *For Routing between different pages(react-router-dom)
+
+    -->Redux 
+      *Redux is a state management library
+
+      1)Action 
+      2)Action Creator
+      They are javascript functions which return 
+      plain javascript object which contains type and payload?
+
+      3)Dispatch-->It will Dispatch the plain javascript 
+      object which is return by the action Creator to the reducer
+
+      4)Reducer-->It is used to updated the state based on the action type
+
+      5)Central store-->where all the data will stored
